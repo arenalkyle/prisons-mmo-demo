@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://k1vdg16kqfhr"]
+
+[ext_resource type="Script" uid="uid://c2ywcfe5sagiv" path="res://scripts/GameWorld.gd" id="1_13lyd"]
+[ext_resource type="Script" uid="uid://dqkiq7icqcxlu" path="res://scripts/NetworkClient.gd" id="2_5og86"]
+[ext_resource type="Script" uid="uid://4p80ierw5wb8" path="res://scripts/PlayerController.gd" id="3_2ifvn"]
+[ext_resource type="Texture2D" uid="uid://cir3tdiwj4qub" path="res://assets/blueSquare.png" id="4_13lyd"]
+
+[node name="GameWorld" type="Node2D" unique_id=905218831]
+script = ExtResource("1_13lyd")
+
+[node name="NetworkClient" type="Node" parent="." unique_id=532053567]
+unique_name_in_owner = true
+script = ExtResource("2_5og86")
+
+[node name="PlayerController" type="Node2D" parent="." unique_id=302547610]
+unique_name_in_owner = true
+script = ExtResource("3_2ifvn")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerController" unique_id=372716677]
+texture = ExtResource("4_13lyd")
+
+[node name="Camera2D" type="Camera2D" parent="PlayerController" unique_id=1739897241]

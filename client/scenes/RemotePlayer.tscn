@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c23cf7ev08aov"]
+
+[ext_resource type="Script" uid="uid://ce5fcpd3p11vh" path="res://scripts/RemotePlayer.gd" id="1_3fgre"]
+[ext_resource type="Texture2D" uid="uid://uylfvg5oxuer" path="res://assets/redSquare.png" id="2_63ket"]
+
+[node name="RemotePlayer" type="Node2D" unique_id=628937309]
+script = ExtResource("1_3fgre")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=766722670]
+texture = ExtResource("2_63ket")
+
+[node name="Label" type="Label" parent="." unique_id=1333936629]
+offset_right = 40.0
+offset_bottom = 23.0

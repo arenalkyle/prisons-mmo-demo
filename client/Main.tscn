@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b8b331ix13ero"]
+
+[ext_resource type="Script" uid="uid://dqkiq7icqcxlu" path="res://scripts/NetworkClient.gd" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://cbg887cewbalf" path="res://Main.gd" id="1_uu6xs"]
+
+[node name="Main" type="Node2D" unique_id=2136947730]
+script = ExtResource("1_uu6xs")
+
+[node name="NetworkClient" type="Node" parent="." unique_id=661725037]
+script = ExtResource("1_glv2v")
