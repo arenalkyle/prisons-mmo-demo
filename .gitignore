@@ -3,6 +3,14 @@
 **/*.rs.bk
 Cargo.lock
 
+# --- Godot (GDScript) ---
+client/.godot/
+client/.import/
+client/export_presets.cfg
+*.translation
+*.uid
+*.tmp
+
 # Database
 .env
 *.db
