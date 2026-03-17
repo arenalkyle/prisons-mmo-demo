@@ -76,6 +76,7 @@ pub(crate) async fn handle_client(
             let reject = ServerPacket::TransferDenied {
                 reason: TransferError::WorldFull,
             };
+
             let bytes = bincode::serialize(&reject).unwrap();
             let _ = write_frame(&mut socket, &bytes).await;
             return;
@@ -93,6 +94,11 @@ pub(crate) async fn handle_client(
 
     let write_task = tokio::spawn(async move {
         while let Some(data) = rx.recv().await {
+
+            // Simulate artificial lag -> 50ms delay for every outgoing packet.
+            // Uncomment line 100 to simulate.
+            // tokio::time::sleep(std::time::Duration::from_millis(50)).await;
+
             let len = (data.len() as u32).to_le_bytes();
             if writer.write_all(&len).await.is_err() || writer.write_all(&data).await.is_err() {
                 break;
