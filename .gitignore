@@ -1,0 +1,15 @@
+# Demo .gitignore
+**/target/
+**/*.rs.bk
+Cargo.lock
+
+# Database
+.env
+*.db
+*.db-journal
+**/persistence/dump.sql
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
